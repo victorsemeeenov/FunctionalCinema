@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,23 @@
 		57DFAF602426141100DFF48F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DFAF5F2426141100DFF48F /* Assets.xcassets */; };
 		57DFAF632426141100DFF48F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DFAF622426141100DFF48F /* Preview Assets.xcassets */; };
 		57DFAF662426141100DFF48F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DFAF642426141100DFF48F /* LaunchScreen.storyboard */; };
+		57DFAF7124261FE900DFF48F /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF7024261FE900DFF48F /* List.swift */; };
+		57DFAF742426201700DFF48F /* DataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF732426201700DFF48F /* DataStructure.swift */; };
+		57DFAF772426209600DFF48F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF762426209600DFF48F /* String+Extensions.swift */; };
+		57DFAF79242620E100DFF48F /* HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF78242620E100DFF48F /* HashTable.swift */; };
+		57DFAF7D2426212C00DFF48F /* DecodableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF7C2426212C00DFF48F /* DecodableType.swift */; };
+		57DFAF7F2426215000DFF48F /* CustomCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF7E2426215000DFF48F /* CustomCodable.swift */; };
+		57DFAF812426221200DFF48F /* CodableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF802426221200DFF48F /* CodableList.swift */; };
+		57DFAF832426223200DFF48F /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF822426223200DFF48F /* Coder.swift */; };
+		57DFAF852426224D00DFF48F /* CustomCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF842426224D00DFF48F /* CustomCoder.swift */; };
+		57DFAF892426555300DFF48F /* Seance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF882426555300DFF48F /* Seance.swift */; };
+		57DFAF8B2426557600DFF48F /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF8A2426557600DFF48F /* Film.swift */; };
+		57DFAF8D2426558700DFF48F /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF8C2426558700DFF48F /* Director.swift */; };
+		57DFAF90242655FD00DFF48F /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF8F242655FD00DFF48F /* StorageService.swift */; };
+		57DFAF942426614800DFF48F /* StorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF932426614800DFF48F /* StorageError.swift */; };
+		57DFAF962426616F00DFF48F /* CoderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF952426616F00DFF48F /* CoderError.swift */; };
+		57DFAF9A2426824500DFF48F /* StorageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF992426824500DFF48F /* StorageEntity.swift */; };
+		7C0193013B891F8097B35EFC /* Pods_FunctionalCinema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F921572D0F820BCDF4C2E6E2 /* Pods_FunctionalCinema.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +41,26 @@
 		57DFAF622426141100DFF48F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57DFAF652426141100DFF48F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57DFAF672426141100DFF48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57DFAF7024261FE900DFF48F /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		57DFAF732426201700DFF48F /* DataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructure.swift; sourceTree = "<group>"; };
+		57DFAF762426209600DFF48F /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		57DFAF78242620E100DFF48F /* HashTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTable.swift; sourceTree = "<group>"; };
+		57DFAF7C2426212C00DFF48F /* DecodableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableType.swift; sourceTree = "<group>"; };
+		57DFAF7E2426215000DFF48F /* CustomCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCodable.swift; sourceTree = "<group>"; };
+		57DFAF802426221200DFF48F /* CodableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableList.swift; sourceTree = "<group>"; };
+		57DFAF822426223200DFF48F /* Coder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coder.swift; sourceTree = "<group>"; };
+		57DFAF842426224D00DFF48F /* CustomCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCoder.swift; sourceTree = "<group>"; };
+		57DFAF86242622CF00DFF48F /* FunctionalCinema.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FunctionalCinema.entitlements; sourceTree = "<group>"; };
+		57DFAF882426555300DFF48F /* Seance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seance.swift; sourceTree = "<group>"; };
+		57DFAF8A2426557600DFF48F /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		57DFAF8C2426558700DFF48F /* Director.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
+		57DFAF8F242655FD00DFF48F /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		57DFAF932426614800DFF48F /* StorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageError.swift; sourceTree = "<group>"; };
+		57DFAF952426616F00DFF48F /* CoderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderError.swift; sourceTree = "<group>"; };
+		57DFAF992426824500DFF48F /* StorageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageEntity.swift; sourceTree = "<group>"; };
+		82578FD24F460E4086DBFAA5 /* Pods-FunctionalCinema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalCinema.release.xcconfig"; path = "Target Support Files/Pods-FunctionalCinema/Pods-FunctionalCinema.release.xcconfig"; sourceTree = "<group>"; };
+		EFA47CAEFC7B1A558E994499 /* Pods-FunctionalCinema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalCinema.debug.xcconfig"; path = "Target Support Files/Pods-FunctionalCinema/Pods-FunctionalCinema.debug.xcconfig"; sourceTree = "<group>"; };
+		F921572D0F820BCDF4C2E6E2 /* Pods_FunctionalCinema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunctionalCinema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +68,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C0193013B891F8097B35EFC /* Pods_FunctionalCinema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3772233A8D22FB230830C492 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFA47CAEFC7B1A558E994499 /* Pods-FunctionalCinema.debug.xcconfig */,
+				82578FD24F460E4086DBFAA5 /* Pods-FunctionalCinema.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		57DFAF4D2426140C00DFF48F = {
 			isa = PBXGroup;
 			children = (
 				57DFAF582426140C00DFF48F /* FunctionalCinema */,
 				57DFAF572426140C00DFF48F /* Products */,
+				3772233A8D22FB230830C492 /* Pods */,
+				D23AC8C4B7114D75C37AB0FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +105,12 @@
 		57DFAF582426140C00DFF48F /* FunctionalCinema */ = {
 			isa = PBXGroup;
 			children = (
+				57DFAF872426550000DFF48F /* Model */,
+				57DFAF86242622CF00DFF48F /* FunctionalCinema.entitlements */,
+				57DFAF7A2426210500DFF48F /* Services */,
+				57DFAF752426208900DFF48F /* Extensions */,
+				57DFAF722426200800DFF48F /* Protocols */,
+				57DFAF6F24261FC700DFF48F /* Data Structures */,
 				57DFAF592426140C00DFF48F /* AppDelegate.swift */,
 				57DFAF5B2426140C00DFF48F /* SceneDelegate.swift */,
 				57DFAF5D2426140C00DFF48F /* ContentView.swift */,
@@ -75,6 +130,81 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		57DFAF6F24261FC700DFF48F /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				57DFAF7024261FE900DFF48F /* List.swift */,
+				57DFAF78242620E100DFF48F /* HashTable.swift */,
+				57DFAF802426221200DFF48F /* CodableList.swift */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		57DFAF722426200800DFF48F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				57DFAF7E2426215000DFF48F /* CustomCodable.swift */,
+				57DFAF732426201700DFF48F /* DataStructure.swift */,
+				57DFAF822426223200DFF48F /* Coder.swift */,
+				57DFAF992426824500DFF48F /* StorageEntity.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		57DFAF752426208900DFF48F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				57DFAF762426209600DFF48F /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		57DFAF7A2426210500DFF48F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				57DFAF8E242655A200DFF48F /* Storage */,
+				57DFAF7B2426210A00DFF48F /* Coder */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		57DFAF7B2426210A00DFF48F /* Coder */ = {
+			isa = PBXGroup;
+			children = (
+				57DFAF7C2426212C00DFF48F /* DecodableType.swift */,
+				57DFAF842426224D00DFF48F /* CustomCoder.swift */,
+				57DFAF952426616F00DFF48F /* CoderError.swift */,
+			);
+			path = Coder;
+			sourceTree = "<group>";
+		};
+		57DFAF872426550000DFF48F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				57DFAF882426555300DFF48F /* Seance.swift */,
+				57DFAF8A2426557600DFF48F /* Film.swift */,
+				57DFAF8C2426558700DFF48F /* Director.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57DFAF8E242655A200DFF48F /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				57DFAF8F242655FD00DFF48F /* StorageService.swift */,
+				57DFAF932426614800DFF48F /* StorageError.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		D23AC8C4B7114D75C37AB0FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F921572D0F820BCDF4C2E6E2 /* Pods_FunctionalCinema.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57DFAF6A2426141100DFF48F /* Build configuration list for PBXNativeTarget "FunctionalCinema" */;
 			buildPhases = (
+				E1CFD005433BA87299F4DE1F /* [CP] Check Pods Manifest.lock */,
 				57DFAF522426140C00DFF48F /* Sources */,
 				57DFAF532426140C00DFF48F /* Frameworks */,
 				57DFAF542426140C00DFF48F /* Resources */,
+				179782E7A6F0D8E1393619C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,14 +273,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		179782E7A6F0D8E1393619C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FunctionalCinema/Pods-FunctionalCinema-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FunctionalCinema/Pods-FunctionalCinema-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FunctionalCinema/Pods-FunctionalCinema-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1CFD005433BA87299F4DE1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FunctionalCinema-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		57DFAF522426140C00DFF48F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				57DFAF5A2426140C00DFF48F /* AppDelegate.swift in Sources */,
+				57DFAF7124261FE900DFF48F /* List.swift in Sources */,
+				57DFAF79242620E100DFF48F /* HashTable.swift in Sources */,
+				57DFAF7D2426212C00DFF48F /* DecodableType.swift in Sources */,
+				57DFAF812426221200DFF48F /* CodableList.swift in Sources */,
+				57DFAF90242655FD00DFF48F /* StorageService.swift in Sources */,
+				57DFAF962426616F00DFF48F /* CoderError.swift in Sources */,
+				57DFAF742426201700DFF48F /* DataStructure.swift in Sources */,
 				57DFAF5C2426140C00DFF48F /* SceneDelegate.swift in Sources */,
+				57DFAF8D2426558700DFF48F /* Director.swift in Sources */,
+				57DFAF7F2426215000DFF48F /* CustomCodable.swift in Sources */,
+				57DFAF852426224D00DFF48F /* CustomCoder.swift in Sources */,
+				57DFAF942426614800DFF48F /* StorageError.swift in Sources */,
+				57DFAF892426555300DFF48F /* Seance.swift in Sources */,
+				57DFAF772426209600DFF48F /* String+Extensions.swift in Sources */,
+				57DFAF832426223200DFF48F /* Coder.swift in Sources */,
 				57DFAF5E2426140C00DFF48F /* ContentView.swift in Sources */,
+				57DFAF9A2426824500DFF48F /* StorageEntity.swift in Sources */,
+				57DFAF8B2426557600DFF48F /* Film.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +472,10 @@
 		};
 		57DFAF6B2426141100DFF48F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA47CAEFC7B1A558E994499 /* Pods-FunctionalCinema.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FunctionalCinema/FunctionalCinema.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FunctionalCinema/Preview Content\"";
 				DEVELOPMENT_TEAM = N28UYC6RTZ;
@@ -295,6 +487,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vsemenov.FunctionalCinema;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,8 +495,10 @@
 		};
 		57DFAF6C2426141100DFF48F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82578FD24F460E4086DBFAA5 /* Pods-FunctionalCinema.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FunctionalCinema/FunctionalCinema.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FunctionalCinema/Preview Content\"";
 				DEVELOPMENT_TEAM = N28UYC6RTZ;
@@ -315,6 +510,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vsemenov.FunctionalCinema;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

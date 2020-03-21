@@ -1,0 +1,16 @@
+PODS:
+  - NoOptionalInterpolation (4.0.0)
+
+DEPENDENCIES:
+  - NoOptionalInterpolation
+
+SPEC REPOS:
+  trunk:
+    - NoOptionalInterpolation
+
+SPEC CHECKSUMS:
+  NoOptionalInterpolation: 3f9c0165bba03fb7b365dc54fe50ec348366b3e4
+
+PODFILE CHECKSUM: 78367677aa24900ba55af40ac55366e6f7d0577f
+
+COCOAPODS: 1.8.4

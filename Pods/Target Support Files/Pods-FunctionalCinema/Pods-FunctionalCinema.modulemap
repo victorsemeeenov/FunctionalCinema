@@ -1,0 +1,6 @@
+framework module Pods_FunctionalCinema {
+  umbrella header "Pods-FunctionalCinema-umbrella.h"
+
+  export *
+  module * { export * }
+}
