@@ -24,6 +24,9 @@ private struct Keys {
   static var genreID: String {
     return "genreID"
   }
+  static var duration: String {
+    return "duration"
+  }
 }
 
 struct Film: StorageEntity {
@@ -32,6 +35,7 @@ struct Film: StorageEntity {
   let rating: Float
   let directorID: String
   let genreID: String
+  let duration: Time
   
   init(from decodableType: DecodableType) throws {
     switch decodableType {
@@ -40,7 +44,10 @@ struct Film: StorageEntity {
         let name = hashTable.value(for: Keys.name) as? String,
         let rating = hashTable.value(for: Keys.rating) as? Float,
         let directorID = hashTable.value(for: Keys.directorID) as? String,
-        let genreID = hashTable.value(for: Keys.genreID) as? String else {
+        let genreID = hashTable.value(for: Keys.genreID) as? String,
+        let durationString = hashTable.value(for: Keys.duration) as? String,
+        let durationData = durationString.data(using: .utf8),
+        let duration: Time = try? CustomCoder().decode(data: durationData)else {
           throw CoderError.cantDecode
       }
       self.id = id
@@ -48,6 +55,7 @@ struct Film: StorageEntity {
       self.rating = rating
       self.directorID = directorID
       self.genreID = genreID
+      self.duration = duration
     default:
       throw CoderError.cantDecode
     }

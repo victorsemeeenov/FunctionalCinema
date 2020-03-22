@@ -21,13 +21,22 @@ private struct Keys {
   static var freeSeetsCount: String {
     return "freeSeetsCount"
   }
+  static var day: String {
+    return "day"
+  }
+  static var time: String {
+    return "time"
+  }
 }
 
-struct Seance: StorageEntity {
+struct Seance: StorageEntity  {
   let id: String
   let filmID: String
   let price: Float
   let freeSeetsCount: Int
+  let day: Day
+  let time: Time
+  
   
   init(from decodableType: DecodableType) throws {
     switch decodableType {
@@ -35,13 +44,20 @@ struct Seance: StorageEntity {
       guard let id = hashTable.value(for: Keys.id) as? String,
         let filmID = hashTable.value(for: Keys.filmID) as? String,
         let price = hashTable.value(for: Keys.price) as? Float,
-        let freeSeetsCount = hashTable.value(for: Keys.freeSeetsCount) as? Int else {
+        let freeSeetsCount = hashTable.value(for: Keys.freeSeetsCount) as? Int,
+        let timeString = hashTable.value(for: Keys.time) as? String,
+        let timeData = timeString.data(using: .utf8),
+        let time: Time = try? CustomCoder().decode(data: timeData),
+        let dayRawValue = hashTable.value(for: Keys.day) as? Int,
+        let day = Day(rawValue: dayRawValue) else {
           throw CoderError.cantDecode
       }
       self.id = id
       self.filmID = filmID
       self.price = price
       self.freeSeetsCount = freeSeetsCount
+      self.time = time
+      self.day = day
     default:
       throw CoderError.cantDecode
     }

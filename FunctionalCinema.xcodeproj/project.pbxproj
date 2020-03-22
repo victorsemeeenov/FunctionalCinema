@@ -29,6 +29,9 @@
 		57DFAF942426614800DFF48F /* StorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF932426614800DFF48F /* StorageError.swift */; };
 		57DFAF962426616F00DFF48F /* CoderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF952426616F00DFF48F /* CoderError.swift */; };
 		57DFAF9A2426824500DFF48F /* StorageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF992426824500DFF48F /* StorageEntity.swift */; };
+		57DFAF9C2427279200DFF48F /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAF9B2427279200DFF48F /* Day.swift */; };
+		57DFAFA224272D2000DFF48F /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAFA124272D2000DFF48F /* Time.swift */; };
+		57DFAFA62427640900DFF48F /* TimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFAFA52427640900DFF48F /* TimeError.swift */; };
 		7C0193013B891F8097B35EFC /* Pods_FunctionalCinema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F921572D0F820BCDF4C2E6E2 /* Pods_FunctionalCinema.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,9 @@
 		57DFAF932426614800DFF48F /* StorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageError.swift; sourceTree = "<group>"; };
 		57DFAF952426616F00DFF48F /* CoderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderError.swift; sourceTree = "<group>"; };
 		57DFAF992426824500DFF48F /* StorageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageEntity.swift; sourceTree = "<group>"; };
+		57DFAF9B2427279200DFF48F /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		57DFAFA124272D2000DFF48F /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		57DFAFA52427640900DFF48F /* TimeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeError.swift; sourceTree = "<group>"; };
 		82578FD24F460E4086DBFAA5 /* Pods-FunctionalCinema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalCinema.release.xcconfig"; path = "Target Support Files/Pods-FunctionalCinema/Pods-FunctionalCinema.release.xcconfig"; sourceTree = "<group>"; };
 		EFA47CAEFC7B1A558E994499 /* Pods-FunctionalCinema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalCinema.debug.xcconfig"; path = "Target Support Files/Pods-FunctionalCinema/Pods-FunctionalCinema.debug.xcconfig"; sourceTree = "<group>"; };
 		F921572D0F820BCDF4C2E6E2 /* Pods_FunctionalCinema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunctionalCinema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +111,7 @@
 		57DFAF582426140C00DFF48F /* FunctionalCinema */ = {
 			isa = PBXGroup;
 			children = (
+				57DFAFA3242763E600DFF48F /* Utils */,
 				57DFAF872426550000DFF48F /* Model */,
 				57DFAF86242622CF00DFF48F /* FunctionalCinema.entitlements */,
 				57DFAF7A2426210500DFF48F /* Services */,
@@ -162,6 +169,7 @@
 		57DFAF7A2426210500DFF48F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				57DFAF9D24272C7100DFF48F /* Seance */,
 				57DFAF8E242655A200DFF48F /* Storage */,
 				57DFAF7B2426210A00DFF48F /* Coder */,
 			);
@@ -173,7 +181,6 @@
 			children = (
 				57DFAF7C2426212C00DFF48F /* DecodableType.swift */,
 				57DFAF842426224D00DFF48F /* CustomCoder.swift */,
-				57DFAF952426616F00DFF48F /* CoderError.swift */,
 			);
 			path = Coder;
 			sourceTree = "<group>";
@@ -181,9 +188,9 @@
 		57DFAF872426550000DFF48F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				57DFAF882426555300DFF48F /* Seance.swift */,
-				57DFAF8A2426557600DFF48F /* Film.swift */,
-				57DFAF8C2426558700DFF48F /* Director.swift */,
+				57DFAFA024272CC400DFF48F /* StorageEntity */,
+				57DFAF9B2427279200DFF48F /* Day.swift */,
+				57DFAFA124272D2000DFF48F /* Time.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,9 +199,43 @@
 			isa = PBXGroup;
 			children = (
 				57DFAF8F242655FD00DFF48F /* StorageService.swift */,
-				57DFAF932426614800DFF48F /* StorageError.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		57DFAF9D24272C7100DFF48F /* Seance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Seance;
+			sourceTree = "<group>";
+		};
+		57DFAFA024272CC400DFF48F /* StorageEntity */ = {
+			isa = PBXGroup;
+			children = (
+				57DFAF8C2426558700DFF48F /* Director.swift */,
+				57DFAF8A2426557600DFF48F /* Film.swift */,
+				57DFAF882426555300DFF48F /* Seance.swift */,
+			);
+			path = StorageEntity;
+			sourceTree = "<group>";
+		};
+		57DFAFA3242763E600DFF48F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				57DFAFA4242763F100DFF48F /* Errors */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		57DFAFA4242763F100DFF48F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				57DFAF952426616F00DFF48F /* CoderError.swift */,
+				57DFAF932426614800DFF48F /* StorageError.swift */,
+				57DFAFA52427640900DFF48F /* TimeError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		D23AC8C4B7114D75C37AB0FC /* Frameworks */ = {
@@ -322,6 +363,8 @@
 			files = (
 				57DFAF5A2426140C00DFF48F /* AppDelegate.swift in Sources */,
 				57DFAF7124261FE900DFF48F /* List.swift in Sources */,
+				57DFAFA62427640900DFF48F /* TimeError.swift in Sources */,
+				57DFAFA224272D2000DFF48F /* Time.swift in Sources */,
 				57DFAF79242620E100DFF48F /* HashTable.swift in Sources */,
 				57DFAF7D2426212C00DFF48F /* DecodableType.swift in Sources */,
 				57DFAF812426221200DFF48F /* CodableList.swift in Sources */,
@@ -337,6 +380,7 @@
 				57DFAF772426209600DFF48F /* String+Extensions.swift in Sources */,
 				57DFAF832426223200DFF48F /* Coder.swift in Sources */,
 				57DFAF5E2426140C00DFF48F /* ContentView.swift in Sources */,
+				57DFAF9C2427279200DFF48F /* Day.swift in Sources */,
 				57DFAF9A2426824500DFF48F /* StorageEntity.swift in Sources */,
 				57DFAF8B2426557600DFF48F /* Film.swift in Sources */,
 			);

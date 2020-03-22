@@ -9,43 +9,47 @@
 import Foundation
 
 protocol StorageProtocol {
-  func save<T: StorageEntity>(objects: CodableList<T>,
-                              completion: ((Result<Void, Error>) -> Void))
-  func save<T: StorageEntity>(object: T,
-                              completion: ((Result<Void, Error>) -> Void))
-  func fetch<T: StorageEntity>(completion: ((Result<CodableList<T>, Error>) -> Void))
-  func remove<T: StorageEntity>(object: T,
-                                completion: ((Result<Void, Error>) -> Void))
-  func remove<T: StorageEntity>(objects: CodableList<T>,
-                                completion: ((Result<Void, Error>) -> Void))
+  static func save<T: StorageEntity>(objects: CodableList<T>,
+                                     completion: ((Result<Void, Error>) -> Void))
+  static func save<T: StorageEntity>(object: T,
+                                     completion: ((Result<Void, Error>) -> Void))
+  static func fetch<T: StorageEntity>(completion: ((Result<CodableList<T>, Error>) -> Void))
+  static func remove<T: StorageEntity>(object: T,
+                                       completion: ((Result<Void, Error>) -> Void))
+  static func remove<T: StorageEntity>(objects: CodableList<T>,
+                                       completion: ((Result<Void, Error>) -> Void))
 }
 
-class StorageService: StorageProtocol {
-  func save<T>(objects: CodableList<T>, completion: ((Result<Void, Error>) -> Void)) where T : StorageEntity {
+struct StorageService: StorageProtocol {
+  static func save<T>(objects: CodableList<T>,
+                      completion: ((Result<Void, Error>) -> Void)) where T : StorageEntity {
     completion(read(T.self).flatMap { list -> Result<Void, Error> in
       return write(CodableList(list.removeIfContains(values: objects)
         .append(contentsOf: objects)))
     })
   }
   
-  func save<T>(object: T, completion: ((Result<Void, Error>) -> Void)) where T : StorageEntity {
+  static func save<T>(object: T,
+                      completion: ((Result<Void, Error>) -> Void)) where T : StorageEntity {
     completion(read(T.self).flatMap { list -> Result<Void, Error> in
       return write(CodableList(list.removeIfContains(value: object)
         .append(value: object)))
     })
   }
   
-  func fetch<T>(completion: ((Result<CodableList<T>, Error>) -> Void)) where T : StorageEntity {
+  static func fetch<T>(completion: ((Result<CodableList<T>, Error>) -> Void)) where T : StorageEntity {
     completion(read(T.self))
   }
   
-  func remove<T>(object: T, completion: ((Result<Void, Error>) -> Void)) where T : StorageEntity {
+  static func remove<T>(object: T,
+                        completion: ((Result<Void, Error>) -> Void)) where T : StorageEntity {
     completion(read(T.self).flatMap { list -> Result<Void, Error> in
       return write(CodableList(list.removeIfContains(value: object)))
     })
   }
   
-  func remove<T>(objects: CodableList<T>, completion: ((Result<Void, Error>) -> Void)) where T : StorageEntity {
+  static func remove<T>(objects: CodableList<T>,
+                        completion: ((Result<Void, Error>) -> Void)) where T : StorageEntity {
     completion(read(T.self).flatMap { list -> Result<Void, Error> in
       return write(CodableList(list.removeIfContains(values: objects)))
     })
@@ -53,7 +57,7 @@ class StorageService: StorageProtocol {
   
   
   
-  private func write<T: CustomCodable>(_ objects: CodableList<T>) -> Result<Void, Error> {
+  static private func write<T: CustomCodable>(_ objects: CodableList<T>) -> Result<Void, Error> {
     do {
       return .success(try objects.encode()
         .description
@@ -65,7 +69,7 @@ class StorageService: StorageProtocol {
     }
   }
   
-  private func read<T: CustomCodable>(_ type: T.Type) -> Result<CodableList<T>, Error> {
+  static private func read<T: CustomCodable>(_ type: T.Type) -> Result<CodableList<T>, Error> {
     do {
       guard let data = String(describing: type)
         .data(using: .utf8) else {
